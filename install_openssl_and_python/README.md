@@ -31,11 +31,12 @@ The scripts will download openssl-3.3.1 and Python-3.12.4. It would be nice to c
 The environment variables should be set.
 e.g with python at /path/u/wish/to/install/Python-3.12.4 and openssl at /path/u/wish/to/install/openssl-3.3.1, following system environments are recommended:
 ```
-export OPENSSL_3_3_1_PATH=/path/u/wish/to/install/openssl-3.3.1
+export LOCAL_BASE=/path/u/wish/to/install
+export OPENSSL_3_3_1_PATH=$LOCAL_BASE/openssl-3.3.1
 export LD_LIBRARY_PATH=$OPENSSL_3_3_1_PATH/lib:$LD_LIBRARY_PATH
 export PKG_CONFIG_PATH=$OPENSSL_3_3_1_PATH/lib64/pkgconfig:$PKG_CONFIG_PATH
 
-export PYTHON_3_12_PATH=/path/u/wish/to/install/Python-3.12.4
+export PYTHON_3_12_PATH=$LOCAL_BASE/Python-3.12.4
 export LD_LIBRARY_PATH=$PYTHON_3_12_PATH/lib:$LD_LIBRARY_PATH
 
 ```
